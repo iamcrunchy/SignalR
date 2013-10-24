@@ -33,6 +33,10 @@ namespace Microsoft.AspNet.SignalR.WebSockets
             {
                 _sendQueue = new TaskQueue(_tcs.Task);
             }
+            else
+            {
+                _sendQueue = new TaskQueue();
+            }
         }
 
         public virtual void OnOpen() { }
